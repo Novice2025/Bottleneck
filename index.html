@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bottleneck – Business English for Brazilians | NEXTATION Style</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Learn how to use the term 'bottleneck' in professional English – for identifying, discussing, and solving critical business impediments, with a Brazilian touch."
+  />
+
+  <!-- Base reset + fonts -->
+  <style>
+    /* Basic CSS Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      height: 100%;
+    }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial, "Montserrat", sans-serif;
+      background: radial-gradient(circle at top, #1c1f3b 0%, #050716 45%, #02030b 100%);
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    /* NEXTATION colour tokens (from PDFs) */
+    :root {
+      --bg-main: #02030b;
+      --bg-gradient: radial-gradient(circle at top, #1c1f3b 0%, #050716 45%, #02030b 100%);
+      --card-bg: rgba(15, 18, 40, 0.92);
+      --card-soft-bg: rgba(18, 21, 50, 0.88);
+      --accent-cyan: #4ef2ff;
+      --accent-pink: #ff2f92;
+      --accent-green: #4dff9b;
+      --accent-yellow: #ffe25f;
+      --accent-purple: #aa5dff;
+      --muted: rgba(255,255,255,0.65);
+      --border-glow: rgba(120,120,255,0.45);
+      --shadow-strong: 0 0 36px rgba(130,80,255,0.6);
+      --shadow-soft: 0 0 20px rgba(0,0,0,0.65);
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --radius-sm: 10px;
+      --transition-fast: 0.18s ease-out;
+      --transition-med: 0.28s ease-out;
+    }
+
+    /* Layout */
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #00f5ff, #ff2f92, #ffe25f, #4dff9b);
+      box-shadow: 0 0 18px rgba(0, 0, 0, 0.9);
+      z-index: 10;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 70px auto 40px auto;
+      padding: 0 18px 40px 18px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 26px;
+    }
+
+    .orb {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 20%, #ffffff, transparent 60%),
+        radial-gradient(circle at 70% 80%, #00fff0, transparent 55%),
+        radial-gradient(circle at 50% 50%, #ff2f92, transparent 65%);
+      box-shadow:
+        0 0 20px rgba(0,255,255,0.7),
+        0 0 28px rgba(255,0,160,0.55);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .orb::before {
+      content: "";
+      position: absolute;
+      inset: -20%;
+      background: conic-gradient(
+        from 0deg,
+        rgba(78, 242, 255, 0.28),
+        rgba(255, 47, 146, 0.3),
+        transparent 40%,
+        transparent 100%
+      );
+      animation: orbit 7s linear infinite;
+      mix-blend-mode: screen;
+    }
+
+    @keyframes orbit {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .header-text h1 {
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      background: linear-gradient(90deg, #4ef2ff, #ff2f92);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .header-text h2 {
+      margin-top: 4px;
+      font-size: 1.5rem;
+      color: var(--accent-cyan);
+      text-shadow: 0 0 12px rgba(78, 242, 255, 0.5);
+    }
+
+    .header-text p {
+      margin-top: 6px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      max-width: 520px;
+    }
+
+    /* Added the Daby Lego Disruptive Chain Method 4 Professionals line */
+    .header-text .tagline {
+      margin-top: 4px;
+      font-size: 0.85rem;
+      color: var(--accent-green);
+      letter-spacing: 0.05em;
+      font-weight: 500;
+    }
+
+    .pill {
+      margin-left: auto;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: linear-gradient(
+        90deg,
+        rgba(8,235,255,0.25),
+        rgba(255,0,168,0.20)
+      );
+      border: 1px solid rgba(142,255,255,0.4);
+      font-size: 0.75rem;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .pill span.badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent-green);
+      box-shadow: 0 0 9px rgba(77, 255, 179, 0.9);
+    }
+
+    /* Sections baseline */
+    section {
+      margin-top: 22px;
+      padding: 20px 18px 22px 18px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, rgba(13,16,40,0.98), rgba(6,8,26,0.98));
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(120,120,255,0.32);
+      position: relative;
+      overflow: hidden;
+    }
+
+    section::before {
+      content: "";
+      position: absolute;
+      top: -60px;
+      left: -40px;
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle, rgba(87,57,255,0.35), transparent 58%);
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    section h3 {
+      position: relative;
+      z-index: 1;
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+    }
+
+    section h4 {
+      position: relative;
+      z-index: 1;
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    section p,
+    section ul,
+    section li {
+      position: relative;
+      z-index: 1;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.9);
+    }
+
+    section .subtitle {
+      color: var(--muted);
+      margin-bottom: 6px;
+      font-size: 0.85rem;
+    }
+
+    /* Specific spacing for Part 2 points */
+    .part2-point {
+      margin-bottom: 24px; /* This creates the desired two-line space */
+    }
+    .part2-point:last-of-type {
+      margin-bottom: 0; /* No extra space after the last point */
+    }
+
+
+    /* Different colours for each part to separate visually */
+    #expression {
+      border-color: rgba(78,242,255,0.7);
+    }
+    #expression h3 {
+      color: var(--accent-cyan);
+    }
+
+    #when-to-use {
+      border-color: rgba(255,47,146,0.7);
+    }
+    #when-to-use h3 {
+      color: var(--accent-pink);
+    }
+
+    #scenarios {
+      border-color: rgba(170,93,255,0.8);
+    }
+    #scenarios h3 {
+      color: var(--accent-purple);
+    }
+
+    #exercises {
+      border-color: rgba(77,255,155,0.7);
+    }
+    #exercises h3 {
+      color: var(--accent-green);
+    }
+
+    #vocab {
+      border-color: rgba(255,226,95,0.85);
+    }
+    #vocab h3 {
+      color: var(--accent-yellow);
+    }
+
+    /* Expression block */
+    .expression-block {
+      margin-top: 6px;
+      padding: 18px;
+      border-radius: var(--radius-md);
+      background: radial-gradient(circle at top, rgba(255,255,255,0.06), rgba(3,5,24,0.96));
+      border: 1px solid rgba(178,75,243,0.45);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .expression-main {
+      font-size: 1.6rem;
+      margin-bottom: 4px;
+      background: linear-gradient(120deg, #ffe25f, #ff2f92, #4ef2ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 600;
+    }
+
+    .expression-pron {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .expression-def {
+      font-size: 1rem;
+      margin-bottom: 12px;
+    }
+
+    .expression-pt {
+      font-size: 0.9rem;
+      color: var(--accent-cyan);
+      font-style: italic;
+    }
+
+    .btn-play {
+      background: linear-gradient(45deg, var(--accent-cyan), var(--accent-purple));
+      color: var(--bg-main);
+      border: none;
+      padding: 10px 20px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      box-shadow: 0 0 10px rgba(78, 242, 255, 0.4);
+      margin-top: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-play:hover {
+      opacity: 0.9;
+      box-shadow: 0 0 15px rgba(78, 242, 255, 0.6);
+      transform: translateY(-1px);
+    }
+
+    /* Scenarios */
+    .scenarios-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .scenario-card {
+      background: var(--card-bg);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      border: 1px solid rgba(170,93,255,0.4);
+      box-shadow: 0 0 15px rgba(170,93,255,0.2);
+      transition: var(--transition-med);
+    }
+    .scenario-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 25px rgba(170,93,255,0.4);
+    }
+
+    .scenario-title {
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--accent-purple);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .scenario-emoji {
+      font-size: 1.4rem;
+    }
+
+    .scenario-example {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 8px;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .scenario-example .you {
+      font-weight: 600;
+      color: var(--accent-cyan);
+    }
+
+    .scenario-context {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .scenario-pt {
+      font-size: 0.85rem;
+      color: var(--accent-pink);
+      font-style: italic;
+    }
+
+    /* Exercises */
+    .exercise-block {
+      background: var(--card-soft-bg);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      border: 1px solid rgba(77,255,155,0.4);
+      box-shadow: 0 0 15px rgba(77,255,155,0.2);
+      margin-top: 20px;
+    }
+
+    .exercise-title {
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--accent-green);
+      margin-bottom: 10px;
+    }
+
+    .exercise-instruction {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 12px;
+      color: rgba(255,255,255,0.85);
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 120px;
+      padding: 12px;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(77,255,155,0.5);
+      background-color: rgba(0,0,0,0.4);
+      color: #ffffff;
+      font-family: "Space Mono", monospace;
+      font-size: 0.9rem;
+      resize: vertical;
+      margin-top: 10px;
+      box-shadow: inset 0 0 8px rgba(77,255,155,0.2);
+      transition: border-color var(--transition-fast);
+    }
+    textarea:focus {
+      outline: none;
+      border-color: var(--accent-green);
+      box-shadow: inset 0 0 12px rgba(77,255,155,0.4), 0 0 8px rgba(77,255,155,0.3);
+    }
+
+    .char-counter {
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-align: right;
+      margin-top: 4px;
+    }
+
+    .buttons-row {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 15px;
+      gap: 10px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(45deg, var(--accent-green), var(--accent-cyan));
+      color: var(--bg-main);
+      border: none;
+      padding: 10px 20px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      box-shadow: 0 0 10px rgba(77, 255, 155, 0.4);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover {
+      opacity: 0.9;
+      box-shadow: 0 0 15px rgba(77, 255, 155, 0.6);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: var(--card-bg);
+      color: var(--accent-green);
+      border: 1px solid var(--accent-green);
+      padding: 10px 20px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      box-shadow: 0 0 10px rgba(77, 255, 155, 0.2);
+    }
+    .btn-secondary:hover {
+      background: rgba(77, 255, 155, 0.1);
+      box-shadow: 0 0 15px rgba(77, 255, 155, 0.4);
+      transform: translateY(-1px);
+    }
+
+    /* Feedback messages */
+    .feedback-message {
+      margin-top: 15px;
+      padding: 12px 18px;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      display: none; /* Hidden by default */
+      font-weight: 500;
+    }
+
+    .feedback-correct {
+      background-color: rgba(77, 255, 155, 0.2);
+      border: 1px solid var(--accent-green);
+      color: var(--accent-green);
+      box-shadow: 0 0 12px rgba(77, 255, 155, 0.4);
+    }
+
+    .feedback-incorrect {
+      background-color: rgba(255, 47, 146, 0.2);
+      border: 1px solid var(--accent-pink);
+      color: var(--accent-pink);
+      box-shadow: 0 0 12px rgba(255, 47, 146, 0.4);
+    }
+
+    .feedback-tip {
+      background-color: rgba(78, 242, 255, 0.2);
+      border: 1px solid var(--accent-cyan);
+      color: var(--accent-cyan);
+      box-shadow: 0 0 12px rgba(78, 242, 255, 0.4);
+    }
+
+    /* Vocabulary */
+    .vocab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .vocab-item {
+      background: var(--card-soft-bg);
+      border-radius: var(--radius-sm);
+      padding: 15px;
+      border: 1px solid rgba(255,226,95,0.4);
+      box-shadow: 0 0 10px rgba(255,226,95,0.15);
+    }
+
+    .vocab-term {
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--accent-yellow);
+      margin-bottom: 4px;
+    }
+
+    .vocab-def {
+      font-size: 0.9rem;
+      line-height: 1.4;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 6px;
+    }
+
+    .vocab-pt {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      padding-bottom: 20px;
+    }
+
+    .highlight {
+      background: linear-gradient(90deg, #4ef2ff, #ff2f92);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar"></div>
+
+  <main class="page">
+    <header class="header">
+      <div class="orb"></div>
+      <div class="header-text">
+        <h1>NEXTATION</h1>
+        <h2>Mastering "Bottleneck" in Business English</h2>
+        <p>
+          A lesson for Brazilian professionals to identify, discuss, and resolve critical impediments in English.
+        </p>
+        <p class="tagline">Daby Lego Disruptive Chain Method 4 Professionals</p>
+      </div>
+      <div class="pill">
+        <span class="badge-dot"></span> Live
+      </div>
+    </header>
+
+    <!-- Section 1: Expression -->
+    <section id="expression">
+      <h3>Part 1 · The Expression</h3>
+      <h4>What is a "Bottleneck"?</h4>
+      <div class="expression-block">
+        <div class="expression-main">Bottleneck</div>
+        <div class="expression-pron">/ˈbɒtlˌnɛk/</div>
+        <div class="expression-def">
+          A point of congestion in a production system (or any process) that occurs when workloads arrive too quickly for the production process to handle. It limits the overall capacity or speed of the entire system.
+        </div>
+        <div class="expression-pt">
+          Em Português: Gargalo, ponto de estrangulamento, obstáculo.
+        </div>
+        <button class="btn-play" type="button" onclick="playBottleneck()">
+          🔊 Listen 'bottleneck'
+        </button>
+      </div>
+      <p class="subtitle" style="margin-top: 20px;">
+        Think of a narrow bottle neck – it slows down the flow of liquid, no matter how wide the bottle or how much liquid is inside.
+      </p>
+    </section>
+
+    <!-- Section 2: When & how to use it -->
+    <section id="when-to-use">
+      <h3>Part 2 · When & how to use it</h3>
+      <h4>Professional contexts where Brazilians need this term.</h4>
+
+      <p class="part2-point">
+        Em reuniões, e-mails ou relatórios, usar "bottleneck" é a forma mais profissional e precisa de identificar um problema que está atrasando ou impedindo o progresso.
+      </p>
+
+      <p class="part2-point">
+        Em vez de dizer "estamos com um problema na produção" ou "algo está travando o projeto", você pode ser mais específico e impactante com "We've identified a bottleneck in our production line" ou "The approval process is becoming a bottleneck".
+      </p>
+
+      <p class="part2-point">
+        **Por que é importante para você, profissional brasileiro?**
+      </p>
+
+      <p class="part2-point">
+        No Brasil, muitas vezes usamos expressões mais informais como "está emperrado", "deu ruim", ou "tem um pepino". Em um ambiente de negócios internacional, essas frases podem soar menos profissionais ou até ambíguas. "Bottleneck" é um termo técnico e universalmente compreendido que mostra que você tem uma visão estratégica do processo e não apenas está reclamando de um problema.
+      </p>
+
+      <p class="part2-point">
+        Ele ajuda a focar na **causa raiz** do problema e não apenas no sintoma. Ao usar "bottleneck", você sinaliza que está pronto para analisar o fluxo, identificar o ponto de estrangulamento e propor soluções, como um verdadeiro líder.
+      </p>
+
+      <p class="part2-point">
+        **Exemplo de impacto:**
+      </p>
+
+      <p class="part2-point">
+        **Informal (Brazilian Portuguese mindset):** "A aprovação do cliente está atrasando tudo."
+      </p>
+
+      <p class="part2-point">
+        **Professional (English with "bottleneck"):** "The client's approval process has become a significant <span class="highlight">bottleneck</span> for the project timeline."
+      </p>
+
+      <p class="part2-point">
+        Percebe a diferença? A segunda frase é mais objetiva, menos emocional e mais focada na análise do processo. É a linguagem que seus colegas e superiores internacionais esperam.
+      </p>
+    </section>
+
+    <!-- Section 3: Situations & Examples -->
+    <section id="scenarios">
+      <h3>Part 3 · Situations & Examples</h3>
+      <h4>See "bottleneck" in action across different business contexts.</h4>
+
+      <div class="scenarios-grid">
+        <!-- Scenario 1: Production -->
+        <article class="scenario-card">
+          <div class="scenario-title">
+            <span class="scenario-emoji">🏭</span> Production Line
+          </div>
+          <p class="scenario-example">
+            <span class="you">Team Meeting:</span><br />
+            “We've identified a <span class="highlight">bottleneck</span> in the assembly line at the quality control stage, which is slowing down our output.”
+          </p>
+          <p class="scenario-context">
+            Clearly stating where the delay is occurring in a manufacturing process.
+          </p>
+          <p class="scenario-pt">
+            "Um gargalo na linha de montagem na etapa de controle de qualidade."
+          </p>
+        </article>
+
+        <!-- Scenario 2: Software Development -->
+        <article class="scenario-card">
+          <div class="scenario-title">
+            <span class="scenario-emoji">💻</span> Software Development
+          </div>
+          <p class="scenario-example">
+            <span class="you">Project Update:</span><br />
+            “The code review process is becoming a <span class="highlight">bottleneck</span>; we need to streamline it to meet our sprint deadlines.”
+          </p>
+          <p class="scenario-context">
+            Highlighting a process that is slowing down software delivery.
+          </p>
+          <p class="scenario-pt">
+            "O processo de revisão de código está virando um gargalo."
+          </p>
+        </article>
+
+        <!-- Scenario 3: Logistics & Supply Chain -->
+        <article class="scenario-card">
+          <div class="scenario-title">
+            <span class="scenario-emoji">🚚</span> Logistics & Supply Chain
+          </div>
+          <p class="scenario-example">
+            <span class="you">Email to Supplier:</span><br />
+            “The customs clearance procedure is a major <span class="highlight">bottleneck</span> for our international shipments.”
+          </p>
+          <p class="scenario-context">
+            Identifying an external factor causing delays in the supply chain.
+          </p>
+          <p class="scenario-pt">
+            "O processo de desembaraço aduaneiro é um grande gargalo."
+          </p>
+        </article>
+
+        <!-- Scenario 4: Sales & Marketing -->
+        <article class="scenario-card">
+          <div class="scenario-title">
+            <span class="scenario-emoji">📊</span> Sales & Marketing
+          </div>
+          <p class="scenario-example">
+            <span class="you">Strategy Meeting:</span><br />
+            “Our lead qualification process is a <span class="highlight">bottleneck</span>; we're generating many leads but converting few.”
+          </p>
+          <p class="scenario-context">
+            Pinpointing where potential customers are getting stuck in the sales funnel.
+          </p>
+          <p class="scenario-pt">
+            "Nosso processo de qualificação de leads é um gargalo."
+          </p>
+        </article>
+
+        <!-- Scenario 5: Human Resources -->
+        <article class="scenario-card">
+          <div class="scenario-title">
+            <span class="scenario-emoji">👥</span> Human Resources
+          </div>
+          <p class="scenario-example">
+            <span class="you">HR Report:</span><br />
+            “The lengthy onboarding process has become a <span class="highlight">bottleneck</span> for integrating new hires efficiently.”
+          </p>
+          <p class="scenario-context">
+            Describing an internal process that is hindering efficiency.
+          </p>
+          <p class="scenario-pt">
+            "O longo processo de integração se tornou um gargalo."
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section 4: Participative exercises -->
+    <section id="exercises">
+      <h3>Part 4 · Participative practice</h3>
+      <h4>Write, speak, and feel comfortable using "bottleneck"</h4>
+
+      <!-- Exercise 1: Email writing -->
+      <div class="exercise-block">
+        <div class="exercise-title">Exercise 1 · Email about a project bottleneck</div>
+        <p class="exercise-instruction">
+          Imagine you are a project manager. Your team is facing a delay because a specific approval from another department is taking too long.
+          Write a short email (4–6 lines) to your director, using
+          <span class="highlight">"bottleneck"</span> at least once.
+        </p>
+        <p class="exercise-instruction" style="font-size:0.88rem; color:var(--muted);">
+          Hint in Portuguese: você pode começar com “We've identified a bottleneck…” ou “The approval process is creating a bottleneck…”.
+        </p>
+        <textarea id="ex1" placeholder="Type your email here in English..."></textarea>
+        <div class="char-counter" id="ex1-counter">0 characters</div>
+        <div class="buttons-row">
+          <button class="btn-primary" type="button" onclick="checkExercise1()">
+            Check my email
+          </button>
+        </div>
+        <div id="ex1-feedback" class="feedback-message"></div>
+      </div>
+
+      <!-- Exercise 2: Meetings phrases -->
+      <div class="exercise-block">
+        <div class="exercise-title">Exercise 2 · Phrases for meetings</div>
+        <p class="exercise-instruction">
+          Below are four Brazilian-style situations. For each, say out loud a sentence with "bottleneck".
+          If you want, write it down to fix it in your memory.
+        </p>
+        <ul style="margin-top:6px; padding-left:18px;">
+          <li>1. Um processo de contratação que está muito lento.</li>
+          <li>2. A falta de um software específico que impede o time de avançar.</li>
+          <li>3. O tempo que o setor de TI leva para resolver chamados.</li>
+          <li>4. A dependência de uma única pessoa para aprovar todas as decisões.</li>
+        </ul>
+        <textarea id="ex2" placeholder="Type your sentences here in English..."></textarea>
+        <div class="char-counter" id="ex2-counter">0 characters</div>
+        <div class="buttons-row">
+          <button class="btn-primary" type="button" onclick="checkExercise2()">
+            Check my phrases
+          </button>
+        </div>
+        <div id="ex2-feedback" class="feedback-message"></div>
+      </div>
+    </section>
+
+    <!-- Section 5: Vocabulary Reference -->
+    <section id="vocab">
+      <h3>Part 5 · Vocabulary Reference</h3>
+      <h4>Key business terms from this lesson.</h4>
+
+      <div class="vocab-grid">
+        <div class="vocab-item">
+          <div class="vocab-term">bottleneck</div>
+          <div class="vocab-def">
+            A point of congestion in a system that limits overall capacity or speed.
+          </div>
+          <div class="vocab-pt">
+            gargalo, ponto de estrangulamento.
+          </div>
+        </div>
+
+        <div class="vocab-item">
+          <div class="vocab-term">impediment</div>
+          <div class="vocab-def">
+            A hindrance or obstruction in doing something.
+          </div>
+          <div class="vocab-pt">
+            impedimento, obstáculo.
+          </div>
+        </div>
+
+        <div class="vocab-item">
+          <div class="vocab-term">streamline</div>
+          <div class="vocab-def">
+            To make a process or organization more efficient and effective by simplifying or rationalizing its procedures.
+          </div>
+          <div class="vocab-pt">
+            otimizar, simplificar, agilizar.
+          </div>
+        </div>
+
+        <div class="vocab-item">
+          <div class="vocab-term">output</div>
+          <div class="vocab-def">
+            The amount of something produced by a person, machine, or industry.
+          </div>
+          <div class="vocab-pt">
+            produção, resultado.
+          </div>
+        </div>
+
+        <div class="vocab-item">
+          <div class="vocab-term">assembly line</div>
+          <div class="vocab-def">
+            A series of workers and machines in a factory by which a succession of identical items is progressively assembled.
+          </div>
+          <div class="vocab-pt">
+            linha de montagem.
+          </div>
+        </div>
+
+        <div class="vocab-item">
+          <div class="vocab-term">code review</div>
+          <div class="vocab-def">
+            A systematic examination of computer source code.
+          </div>
+          <div class="vocab-pt">
+            revisão de código.
+          </div>
+        </div>
+
+        <div class="vocab-item">
+          <div class="vocab-term">sprint deadlines</div>
+          <div class="vocab-def">
+            The fixed dates by which tasks in an agile development sprint must be completed.
+          </div>
+          <div class="vocab-pt">
+            prazos do sprint.
+          </div>
+        </div>
+
+        <div class="vocab-item">
+          <div class="vocab-term">customs clearance</div>
+          <div class="vocab-def">
+            The process of getting goods through customs to facilitate their movement into a country.
+          </div>
+          <div class="vocab-pt">
+            desembaraço aduaneiro.
+          </div>
+        </div>
+
+        <div class="vocab-item">
+          <div class="vocab-term">lead qualification</div>
+          <div class="vocab-def">
+            The process of determining if a potential customer (lead) is a good fit for your product or service.
+          </div>
+          <div class="vocab-pt">
+            qualificação de leads.
+          </div>
+        </div>
+
+        <div class="vocab-item">
+          <div class="vocab-term">onboarding process</div>
+          <div class="vocab-def">
+            The process of integrating a new employee into an organization.
+          </div>
+          <div class="vocab-pt">
+            processo de integração (de novos funcionários).
+          </div>
+        </div>
+
+        <div class="vocab-item">
+          <div class="vocab-term">new hires</div>
+          <div class="vocab-def">
+            Recently employed individuals.
+          </div>
+          <div class="vocab-pt">
+            novos contratados.
+          </div>
+        </div>
+
+        <div class="vocab-item">
+          <div class="vocab-term">root cause</div>
+          <div class="vocab-def">
+            The fundamental reason for the occurrence of a problem.
+          </div>
+          <div class="vocab-pt">
+            causa raiz.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Created for Brazilian professionals to feel confident using
+      <span class="highlight">“bottleneck”</span> in real business English.
+    </footer>
+  </main>
+
+  <!-- Small JS for sound + char counters + answer checking -->
+  <script>
+    // Function to play "bottleneck" sound
+    function playBottleneck() {
+      if (!("speechSynthesis" in window)) {
+        alert("SpeechSynthesis is not supported in this browser.");
+        return;
+      }
+      const utter = new SpeechSynthesisUtterance("bottleneck");
+      utter.lang = "en-US";
+      speechSynthesis.speak(utter);
+    }
+
+    // Function to set up character counters for textareas
+    function setupCounter(textareaId, counterId) {
+      const ta = document.getElementById(textareaId);
+      const counter = document.getElementById(counterId);
+      if (!ta || !counter) return;
+      ta.addEventListener("input", () => {
+        counter.textContent = ta.value.length + " characters";
+      });
+    }
+
+    // Call setupCounter for both exercise textareas
+    setupCounter("ex1", "ex1-counter");
+    setupCounter("ex2", "ex2-counter");
+
+    // Function to display feedback
+    function showFeedback(elementId, message, type) {
+      const feedbackDiv = document.getElementById(elementId);
+      feedbackDiv.textContent = message;
+      feedbackDiv.className = `feedback-message feedback-${type}`; // Apply styling based on type
+      feedbackDiv.style.display = "block"; // Make it visible
+    }
+
+    // --- Exercise 1: Email about a project bottleneck ---
+    function checkExercise1() {
+      const emailText = document.getElementById("ex1").value.toLowerCase();
+      const feedbackId = "ex1-feedback";
+
+      const hasBottleneck = emailText.includes("bottleneck") || emailText.includes("bottlenecks");
+      const hasContext = emailText.includes("delay") || emailText.includes("approval") || emailText.includes("process") || emailText.includes("slow") || emailText.includes("impediment");
+      const isLongEnough = emailText.length > 50;
+
+      if (hasBottleneck && hasContext && isLongEnough) {
+        showFeedback(
+          feedbackId,
+          "Excellent! You've used 'bottleneck' effectively in a business context. Your email sounds professional and clear. Keep up the great work!",
+          "correct"
+        );
+      } else if (hasBottleneck && isLongEnough) {
+        showFeedback(
+          feedbackId,
+          "Good start! You've used 'bottleneck'. Now, try to make sure the context clearly describes a process impediment or delay.",
+          "tip"
+        );
+      } else if (!hasBottleneck && isLongEnough) {
+        showFeedback(
+          feedbackId,
+          "Not quite there. Remember to include 'bottleneck' (or 'bottlenecks') in your email. It's key for professional communication about process issues!",
+          "incorrect"
+        );
+      } else {
+        showFeedback(
+          feedbackId,
+          "Please write a bit more. Your email should be at least 4–6 lines long to fully describe the situation and use 'bottleneck' naturally.",
+          "tip"
+        );
+      }
+    }
+
+    // --- Exercise 2: Phrases for meetings ---
+    function checkExercise2() {
+      const phrasesText = document.getElementById("ex2").value.toLowerCase();
+      const feedbackId = "ex2-feedback";
+
+      const hasBottleneck = phrasesText.includes("bottleneck") || phrasesText.includes("bottlenecks");
+      const hasHiringProcess = phrasesText.includes("hiring") && phrasesText.includes("process") && phrasesText.includes("slow");
+      const hasSoftwareLack = phrasesText.includes("software") && phrasesText.includes("lack");
+      const hasITSupport = phrasesText.includes("it") && phrasesText.includes("support") && phrasesText.includes("time");
+      const hasSingleApprover = phrasesText.includes("single") && phrasesText.includes("approver");
+
+      let correctCount = 0;
+      let tips = [];
+
+      if (hasHiringProcess && hasBottleneck) correctCount++;
+      else if (hasHiringProcess) tips.push("For 'processo de contratação lento', try: 'Our hiring process is a bottleneck.'");
+
+      if (hasSoftwareLack && hasBottleneck) correctCount++;
+      else if (hasSoftwareLack) tips.push("For 'falta de software', consider: 'The lack of specific software is creating a bottleneck.'");
+
+      if (hasITSupport && hasBottleneck) correctCount++;
+      else if (hasITSupport) tips.push("For 'tempo do TI', use: 'IT support response time is a bottleneck.'");
+
+      if (hasSingleApprover && hasBottleneck) correctCount++;
+      else if (hasSingleApprover) tips.push("For 'dependência de uma pessoa', try: 'Having a single approver is a bottleneck.'");
+
+      if (!hasBottleneck) {
+        showFeedback(
+          feedbackId,
+          "Make sure to use 'bottleneck' (or 'bottlenecks') in your sentences for each scenario!",
+          "incorrect"
+        );
+        return;
+      }
+
+      if (correctCount === 4) {
+        showFeedback(
+          feedbackId,
+          "Fantástico! You've captured all four scenarios perfectly using 'bottleneck'. Your understanding is excellent!",
+          "correct"
+        );
+      } else if (correctCount > 0) {
+        showFeedback(
+          feedbackId,
+          `Very good! You've correctly addressed ${correctCount} out of 4 scenarios. Here are some tips for the others: ${tips.join(" ")}`,
+          "tip"
+        );
+      } else {
+        showFeedback(
+          feedbackId,
+          "Keep trying! Remember to use 'bottleneck' for each situation. Focus on identifying the point of congestion. " + tips.join(" "),
+          "incorrect"
+        );
+      }
+    }
+  </script>
+</body>
+</html>
